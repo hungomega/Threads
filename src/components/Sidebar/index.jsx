@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { House, Search, Plus, Heart, UserRound } from "lucide-react";
+import { useSelector } from "react-redux";
 
 const menuItems = [
     { title: "Home", path: "/", icon: House },
@@ -8,10 +9,10 @@ const menuItems = [
     { title: "Activity", path: "/activity", icon: Heart },
     { title: "Profile", path: "/profile", icon: UserRound },
 ];
-
 function Sidebar() {
+    const user = useSelector((state) => state.user.user);
     return (
-        <aside className="fixed left-0 top-0  w-60 flex h-screen flex-col border-r border-gray-200 bg-white px-4 py-8">
+        <aside className="fixed left-0 top-0 flex h-screen w-60 flex-col border-r border-gray-200 bg-white px-4 py-8">
             {/* Logo */}
             <div className="mb-12 px-3 text-2xl font-bold">Threads</div>
 
@@ -38,8 +39,12 @@ function Sidebar() {
                     );
                 })}
             </nav>
+
+            {/* Thông tin người dùng */}
+            <div className="mt-auto border-t border-gray-200 pt-4">
+                <p>{user?.username || "Chưa đăng nhập"}</p>
+            </div>
         </aside>
     );
 }
-
 export default Sidebar;
