@@ -1,79 +1,75 @@
 # Threads Clone
 
-A frontend clone of [Threads](https://www.threads.com/), built with React and Vite. This project recreates the core social networking experience, including authentication, a post feed, post interactions, replies, and user moderation actions.
+Dự án xây dựng giao diện mạng xã hội lấy cảm hứng từ [Threads](https://www.threads.com/), sử dụng React và Vite. Dự án tái hiện các chức năng cốt lõi của một nền tảng mạng xã hội, bao gồm xác thực người dùng, bảng tin, tương tác bài viết, trả lời bài viết và quản lý người dùng.
 
-**Live Demo:** [https://hungomega.github.io/Threads/](https://hungomega.github.io/Threads/)
+**Demo:** [https://hungomega.github.io/Threads/](https://hungomega.github.io/Threads/)
 
-## Preview
+## Công nghệ sử dụng (Tech Stack)
 
-<!-- Add project screenshots here -->
-
-## Tech Stack
-
-| Category | Technologies |
+| Phân loại | Công nghệ |
 |---|---|
 | Frontend | React 19, JavaScript |
 | Build Tool | Vite |
 | Routing | React Router |
 | Styling | Tailwind CSS v4 |
-| UI Components | shadcn/ui, Radix-based components |
+| UI Components | shadcn/ui, Radix UI |
 | State Management | Redux Toolkit, React Redux |
 | HTTP Client | Axios |
 | Form Management | React Hook Form |
 | Form Validation | Yup, @hookform/resolvers |
 | Icons | Lucide React |
 
-## Features
+## Các chức năng chính (Features)
 
-### 1. Authentication
-- User login with email, username, or phone identifier.
-- User registration.
-- Username and email availability checking.
-- Email verification using a token.
-- Forgot password functionality.
-- Password reset with token validation.
-- Persistent authentication using Access Token and Refresh Token.
-- Automatic token refresh using Axios interceptors.
-- Protected routes for authenticated users.
+### 1. Xác thực người dùng (Authentication)
+- Đăng nhập bằng email, username hoặc số điện thoại.
+- Đăng ký tài khoản.
+- Kiểm tra tính khả dụng của username và email.
+- Xác thực email thông qua token.
+- Chức năng quên mật khẩu.
+- Đặt lại mật khẩu bằng token xác thực.
+- Duy trì trạng thái đăng nhập bằng Access Token và Refresh Token.
+- Tự động làm mới token thông qua Axios Interceptors.
+- Bảo vệ các trang yêu cầu đăng nhập bằng Protected Routes.
 
-### 2. Home Feed
-- Fetch posts from the backend API.
-- Display post content, author information, timestamps, and media.
-- Infinite scrolling to load more posts.
-- Loading and error states.
-- Display image and video attachments.
+### 2. Bảng tin (Home Feed)
+- Lấy danh sách bài viết từ Backend API.
+- Hiển thị nội dung bài viết, thông tin tác giả, thời gian đăng và phương tiện đính kèm.
+- Tự động tải thêm bài viết khi cuộn trang (Infinite Scroll).
+- Xử lý trạng thái tải dữ liệu và lỗi.
+- Hiển thị hình ảnh và video đính kèm.
 
-### 3. Post Interactions
-- Like and unlike posts.
-- Reply to posts.
-- Repost and unrepost.
-- Quote posts.
-- Share posts.
-- Save and unsave posts.
+### 3. Tương tác với bài viết (Post Interactions)
+- Thích và bỏ thích bài viết.
+- Trả lời bài viết.
+- Đăng lại và hủy đăng lại bài viết.
+- Trích dẫn bài viết (Quote Post).
+- Chia sẻ bài viết.
+- Lưu và bỏ lưu bài viết.
 
-### 4. Post Management
-- Edit and delete your own posts.
-- Mark posts as not interested.
-- Mute users.
-- Restrict users.
-- Block users.
-- Report posts.
-- Copy post links.
-- Generate embedded post content.
+### 4. Quản lý bài viết và người dùng (Post Management)
+- Chỉnh sửa và xóa bài viết của bản thân.
+- Đánh dấu bài viết không quan tâm.
+- Tắt tiếng người dùng (Mute).
+- Hạn chế người dùng (Restrict).
+- Chặn người dùng (Block).
+- Báo cáo bài viết (Report).
+- Sao chép liên kết bài viết.
+- Tạo nội dung nhúng bài viết (Embed).
 
-### 5. Reply System
-- Create replies with text content.
-- Upload image and video attachments.
-- Select reply permissions.
-- Add topics to replies.
-- Fetch replies from the backend.
+### 5. Hệ thống trả lời (Reply System)
+- Tạo câu trả lời bằng nội dung văn bản.
+- Tải lên hình ảnh và video đính kèm.
+- Lựa chọn quyền trả lời.
+- Thêm chủ đề cho câu trả lời.
+- Lấy danh sách câu trả lời từ Backend API.
 
-### 6. Post Embedding
-- Dedicated embed layout without the main navigation.
-- Display embedded post content.
-- Provide a link to view the original post on Threads.
+### 6. Nhúng bài viết (Post Embedding)
+- Layout riêng dành cho nội dung nhúng, không hiển thị thanh điều hướng chính.
+- Hiển thị nội dung bài viết được nhúng.
+- Cung cấp liên kết để xem bài viết gốc trên Threads.
 
-## Project Structure
+## Cấu trúc dự án (Project Structure)
 
 ```text
 Theads/
@@ -128,93 +124,93 @@ Theads/
 └── vite.config.js
 ```
 
-## Getting Started
+## Hướng dẫn cài đặt (Getting Started)
 
-### Prerequisites
+### Yêu cầu hệ thống
 
 - Node.js
 - npm
 - Git
 
-### Installation
+### Các bước cài đặt
 
-1. Clone the repository:
+**1. Clone repository:**
 
 ```bash
 git clone https://github.com/hungomega/Threads.git
 ```
 
-2. Navigate to the project directory:
+**2. Di chuyển vào thư mục dự án:**
 
 ```bash
 cd Threads
 ```
 
-3. Install dependencies:
+**3. Cài đặt các thư viện:**
 
 ```bash
 npm install
 ```
 
-4. Start the development server:
+**4. Khởi chạy môi trường phát triển:**
 
 ```bash
 npm run dev
 ```
 
-5. Open the local URL displayed in your terminal.
+**5.** Mở địa chỉ Local URL được hiển thị trong Terminal.
 
-## Available Scripts
+## Các câu lệnh (Available Scripts)
 
-| Command | Description |
+| Lệnh | Mô tả |
 |---|---|
-| `npm run dev` | Start the development server |
-| `npm run build` | Build the production application |
-| `npm run preview` | Preview the production build |
-| `npm run lint` | Run ESLint |
+| `npm run dev` | Khởi chạy môi trường phát triển |
+| `npm run build` | Build ứng dụng cho môi trường production |
+| `npm run preview` | Xem trước phiên bản production |
+| `npm run lint` | Kiểm tra mã nguồn bằng ESLint |
 
-## API Integration
+## Tích hợp API (API Integration)
 
-This project communicates with the F8 Threads API using Axios.
+Dự án sử dụng Axios để giao tiếp với F8 Threads API.
 
-**API Base URL:**
+**Địa chỉ API:**
 
 ```text
 https://threads.f8team.dev/api
 ```
 
-API services are organized into separate modules:
+Các API Service được tổ chức thành những module riêng biệt:
 
-- `auth.service.js` – Authentication and account management.
-- `postService.js` – Feed, posts, replies, and post interactions.
-- `axios.js` – Axios instance, request interceptors, and automatic token refresh.
+- `auth.service.js` – Xử lý xác thực và quản lý tài khoản.
+- `postService.js` – Xử lý bảng tin, bài viết, câu trả lời và các thao tác tương tác.
+- `axios.js` – Cấu hình Axios Instance, Request Interceptors và tự động làm mới token.
 
-## Deployment
+## Triển khai (Deployment)
 
-The application is deployed using **GitHub Pages** and **GitHub Actions**.
+Dự án được triển khai bằng **GitHub Pages** kết hợp với **GitHub Actions**.
 
-The deployment workflow:
+Quy trình triển khai:
 
-1. Installs project dependencies.
-2. Builds the application using Vite.
-3. Uploads the production `dist` directory.
-4. Deploys the build artifact to GitHub Pages.
+1. Cài đặt các thư viện cần thiết.
+2. Build ứng dụng bằng Vite.
+3. Đóng gói thư mục `dist`.
+4. Triển khai bản build lên GitHub Pages.
 
-**Live Demo:** [Threads Clone](https://hungomega.github.io/Threads/)
+**Demo:** [Threads Clone](https://hungomega.github.io/Threads/)
 
-## Development Notes
+## Ghi chú phát triển (Development Notes)
 
-This project is developed as a frontend learning project inspired by Threads.
+Đây là dự án thực hành Frontend, được xây dựng dựa trên giao diện và trải nghiệm của Threads.
 
-Some pages, including Search, Activity, Create, and Profile, are currently at an initial implementation stage. The project focuses primarily on authentication, the home feed, post interactions, replies, and API integration.
+Một số trang như Search, Activity, Create và Profile hiện vẫn đang ở giai đoạn triển khai ban đầu. Dự án tập trung chủ yếu vào các chức năng xác thực người dùng, bảng tin, tương tác bài viết, hệ thống trả lời và tích hợp API.
 
-## Author
+## Tác giả (Author)
 
 **Nguyễn Hữu Hùng**
 
 - GitHub: [@hungomega](https://github.com/hungomega)
-- Project Repository: [Threads Clone](https://github.com/hungomega/Threads)
+- Repository: [Threads Clone](https://github.com/hungomega/Threads)
 
 ---
 
-*Built with React, JavaScript, and a passion for learning frontend development.*
+*Được xây dựng bằng React, JavaScript với mục tiêu học tập và phát triển kỹ năng Frontend.*
